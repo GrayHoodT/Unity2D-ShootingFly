@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ShootingFly
 {
-    public class PlayerCollision : MonoBehaviour
+    public class PlayerCollisionable : MonoBehaviour
     {
         public event Action<Collider2D> TriggerEntered;
         public event Action<Collider2D> TriggerExited;

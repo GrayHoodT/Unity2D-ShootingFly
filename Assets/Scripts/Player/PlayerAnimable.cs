@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace ShootingFly
 {
-    public class PlayerAnimator : MonoBehaviour
+    public class PlayerAnimable : MonoBehaviour
     {
         [SerializeField]
         private Animator anim;
