@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 namespace ShootingFly
 {
-    public class PlayerMovement : MonoBehaviour
+    public class PlayerMovable : MonoBehaviour
     {
         [SerializeField]
         private Transform trans;
@@ -34,7 +34,7 @@ namespace ShootingFly
             moveAction.performed += OnMoveInputed;
             moveAction.canceled += OnMoveInputed;
 
-            var collision = GetComponent<PlayerCollision>();
+            var collision = GetComponent<PlayerCollisionable>();
             collision.TriggerEntered += OnTriggerEntered;
             collision.TriggerExited += OnTriggerExited;
         }
@@ -52,7 +52,7 @@ namespace ShootingFly
             moveAction.performed -= OnMoveInputed;
             moveAction.canceled -= OnMoveInputed;
 
-            var collision = GetComponent<PlayerCollision>();
+            var collision = GetComponent<PlayerCollisionable>();
             collision.TriggerEntered -= OnTriggerEntered;
             collision.TriggerExited -= OnTriggerExited;
         }
